@@ -1,5 +1,8 @@
 package org.jmjmdoc.pixup.gui.consola.ventana;
 
+import org.jmjmdoc.pixup.gui.consola.Util.ReadUtil;
+import org.jmjmdoc.pixup.gui.consola.negocio.Ejecutable;
+
 public abstract class LecturaAccion implements Ejecutable
 {
     protected Integer opcion;
@@ -29,9 +32,7 @@ public abstract class LecturaAccion implements Ejecutable
                     flag = false;
                 }
                 else
-                {
-                    procesaOpcion( );
-                }
+                    procesaOpcion();
             }
         }
     }

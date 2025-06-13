@@ -1,5 +1,6 @@
 package org.jmjmdoc.pixup.gui.consola;
 
+import org.jmjmdoc.pixup.gui.consola.negocio.Ejecutable;
 import org.jmjmdoc.pixup.gui.consola.ventana.LecturaAccion;
 
 public class Consola extends LecturaAccion

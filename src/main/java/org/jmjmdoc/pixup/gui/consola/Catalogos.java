@@ -121,7 +121,7 @@ public abstract class Catalogos<T extends Catalogo> extends LecturaAccion
     @Override
     public void despliegaMenu()
     {
-        System.out.println("Menú de Estado:");
+        System.out.println("Menú:");
         System.out.println("Seleccione una opcion:");
         System.out.println("1.-Agregar");
         System.out.println("2.-Editar");

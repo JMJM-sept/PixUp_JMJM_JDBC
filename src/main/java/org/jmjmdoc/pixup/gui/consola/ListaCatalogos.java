@@ -1,5 +1,9 @@
 package org.jmjmdoc.pixup.gui.consola;
 
+import org.jmjmdoc.pixup.gui.consola.model.GeneroMusical;
+import org.jmjmdoc.pixup.gui.consola.negocio.Ejecutable;
+import org.jmjmdoc.pixup.gui.consola.ventana.LecturaAccion;
+
 public class ListaCatalogos extends LecturaAccion
 {
     public static ListaCatalogos listaCatalogos;
@@ -19,10 +23,12 @@ public class ListaCatalogos extends LecturaAccion
     public void despliegaMenu()
     {
         System.out.println( "Seleccione una opcion:" );
-        System.out.println( "1.-Estado");
-        System.out.println( "2.-Municipio");
-        System.out.println( "3.-Colonia");
-        System.out.println( "4.-Salir");
+        System.out.println( "1.-Disquera");
+        System.out.println( "2.-Género musical");
+        System.out.println( "3.-Artista");
+        System.out.println( "4.-Disco");
+        System.out.println( "5.-Canción");
+        System.out.println("6.- Salir");
     }
     @Override
     public int valorMinMenu()
@@ -33,7 +39,7 @@ public class ListaCatalogos extends LecturaAccion
     @Override
     public int valorMaxMenu()
     {
-        return 4;
+        return 6;
     }
 
     @Override
@@ -43,13 +49,19 @@ public class ListaCatalogos extends LecturaAccion
         switch (opcion)
         {
             case 1:
-                ejecutable = EstadoCatalogo.getInstance( );
+                ejecutable = DisqueraCatalogo.getInstance();
                 break;
             case 2:
-                System.out.println( "No implementado" );
+                ejecutable = GeneroMusicalCatalogo.getInstance();
                 break;
             case 3:
-                System.out.println( "No implementado" );
+                ejecutable = ArtistaCatalogo.getInstance();
+                break;
+            case 4:
+                ejecutable = DiscoCatalogo.getInstance();
+                break;
+            case 5:
+                ejecutable = CancionCatalogo.getInstance();
                 break;
         }
         ejecutable.setFlag( true );

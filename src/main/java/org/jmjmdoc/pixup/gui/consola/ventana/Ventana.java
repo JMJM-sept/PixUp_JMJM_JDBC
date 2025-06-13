@@ -1,5 +1,7 @@
 package org.jmjmdoc.pixup.gui.consola.ventana;
 
+import org.jmjmdoc.pixup.gui.consola.negocio.Ejecutable;
+
 public class Ventana implements Ejecutable
 {
     public static Ventana ventana;

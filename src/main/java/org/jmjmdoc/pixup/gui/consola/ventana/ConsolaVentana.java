@@ -1,5 +1,8 @@
 package org.jmjmdoc.pixup.gui.consola.ventana;
 
+import org.jmjmdoc.pixup.gui.consola.Consola;
+import org.jmjmdoc.pixup.gui.consola.negocio.Ejecutable;
+
 public class ConsolaVentana  extends LecturaAccion
 {
     public static ConsolaVentana consolaVentana;
@@ -22,7 +25,7 @@ public class ConsolaVentana  extends LecturaAccion
     {
         System.out.println("Seleccione una opcion:");
         System.out.println("1.-Consola");
-        System.out.println("2.-Ventana");
+        System.out.println("2.-Ventana (No implementada)");
         System.out.println("3.-Salir");
     }
     @Override
@@ -49,6 +52,7 @@ public class ConsolaVentana  extends LecturaAccion
         {
             ejecutable = Ventana.getInstance( );
         }
+        assert ejecutable instanceof Ventana;
         ejecutable.setFlag( true );
         ejecutable.run( );
     }
